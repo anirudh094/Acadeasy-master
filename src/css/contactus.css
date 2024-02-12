@@ -1,0 +1,16 @@
+.contactus-body{
+  background-color: white !important;
+}
+.submit-btn{
+    background-color: #3A5F69;
+    width: 100%;
+    border: 3px solid #3A5F69;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 10px;
+  }
+  .submit-btn:hover{
+    background-color: white;
+    border-color: #3A5F69;
+    color: #3A5F69;
+  }

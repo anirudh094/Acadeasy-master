@@ -1,0 +1,50 @@
+
+
+/* First Banner */
+.first-banner-0{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1050px) {
+  .first-banner-0{
+      display: flex;
+      flex-direction: column;
+  }
+}
+.first-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.first-banner-0 img{
+  width: 500px;
+  max-height: 400px;
+}
+.rotating-heading{
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration-color: white !important
+}
+.fixed-heading{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: left !important;
+  width: 80%;
+}
+.rotating-heading::before {
+  content: "Unlock Learning with Acadeasy!";
+  animation-name: animate;
+  animation-duration: 4.3s;
+  animation-iteration-count: infinite;
+  text-decoration-color: white !important;
+}
+@keyframes animate {
+
+  50% {content: "Learn Today, Lead Tomorrow";}
+}

@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+
+.partners-body{
+    background-color: black;
+    padding: 30px;
+}
+.partners-carousel {
+    background-color: black;
+    height: 200px;
+}
+.partners-cell{
+  height: fit-content;
+  margin-right: 10px;
+  background: white;
+  border-radius: 0px;
+  padding: 0;
+}
+@media screen and (min-width: 900px) {
+    .carousel-cell {
+        width: 28%;
+      }
+}
+.partners-cell img{
+    width: 100%;
+    height: 200px;
+    border-radius: 0%;
+}
