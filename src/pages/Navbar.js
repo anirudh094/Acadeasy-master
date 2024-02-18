@@ -54,7 +54,7 @@ function NavbarHeader () {
     </Navbar.Brand>
     <Nav pullRight className='menu-top-bar'>
       <Nav.Item><Link className="nav-links nav-links-home" to={"/"}>Home</Link></Nav.Item>
-      <Nav.Item><Link className="nav-links" to={"/products"}>Projects</Link></Nav.Item>
+      <Nav.Item><Link className="nav-links" to={"/products"}>Training</Link></Nav.Item>
       <Nav.Item><Link className="nav-links" to={"/aboutus"}>About Us</Link></Nav.Item>
       <Nav.Item><Link className="nav-links" to={"/contactus"}>Contact Us</Link></Nav.Item>
     
@@ -86,7 +86,7 @@ function NavbarHeader () {
         <Drawer.Body>
           <Nav className="nav_side_bar">
             <Nav.Item><Link className="nav-links nav-links-home" to={"/"}>Home</Link></Nav.Item>
-            <Nav.Item><Link className="nav-links" to={"/products"}>Projects</Link></Nav.Item>
+            <Nav.Item><Link className="nav-links" to={"/products"}>Training</Link></Nav.Item>
             <Nav.Item><Link className="nav-links" to={"/aboutus"}>About Us</Link></Nav.Item>
             <Nav.Item><Link className="nav-links" to={"/contactus"}>Contact Us</Link></Nav.Item>
             <Nav.Item>

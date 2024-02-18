@@ -24,7 +24,7 @@ export class WebDevelopment extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("Web Development")
+      equalTo("ReactJs Developer")
     );
 
     onValue(dbref, (snapshot) => {
