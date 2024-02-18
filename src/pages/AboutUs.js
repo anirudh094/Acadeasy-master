@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/about.css";
 import Testimonials from "./Testimonials";
-import Partners from "./Partners.js";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 const AboutUs = () => {
@@ -228,7 +227,6 @@ const AboutUs = () => {
         </AnimatedOnScroll>
       </div>
       <Testimonials />
-      <Partners />
     </>
   );
 };
