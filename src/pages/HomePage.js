@@ -55,7 +55,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-          <img src="images/image1.gif" alt="logo" />
+          <img src="images/it.gif" alt="logo" />
       </div>
 
       <Products />

@@ -1,0 +1,42 @@
+.footer-body{
+    background-color: #3A5F69;
+}
+
+.text{
+    justify-content: center;
+    align-items: center;
+  text-align: center;
+    color: white;
+
+}
+
+.footer-heading{
+    color: #A6C8D8;
+    justify-content: center;
+   text-align: center;
+    align-items: center;
+}
+
+.footer-links{
+   
+    color: white;
+    padding-top: 5px;
+    
+
+}
+
+
+
+.list-items{
+   
+    padding-left: 20px;
+   
+}
+
+.footer-content-links{
+    color:  #A6C8D8;
+}
+
+.footer-content-links:hover{
+    color: white;
+}
