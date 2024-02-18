@@ -27,7 +27,8 @@
   font-size: 40px;
   font-weight: 800;
   text-transform: uppercase;
-  text-decoration-color: white !important
+  text-decoration-color: white !important;
+  color: white;
 }
 .fixed-heading{
   font-size: 20px;

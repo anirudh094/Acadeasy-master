@@ -38,40 +38,57 @@ export class Products extends React.Component {
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {this.state.tableData.map((row, index) => {
               return (
-                
-                  <Link className="group product-group" to={row.data.href}>
-                    <AnimatedOnScroll animationIn="bounce" duration="3000">
+                <Link className="group product-group" to={row.data.href}>
+                  <AnimatedOnScroll animationIn="bounce" duration="3000">
                     <a href={row.data.href} className="">
                       <div className="product-img">
                         <img src={row.data.imageSrc} alt={row.key} />
                       </div>
                       <div className="product-details">
                         <h3 className="product-name">{row.key}</h3>
-                        <h4 className="product-author">
-                          {"By " + row.data.author}
-                        </h4>
-                        <div className="rating-box">
-                          <div>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 576 512"
-                              className="product-rating-star"
-                            >
-                              <path
-                                fill="#FFD43B"
-                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                              />
-                            </svg>
-                          </div>
-                          <div className="product-rating">
-                            {row.data.rating}
-                          </div>
-                          <div className="product-duration">{`|  ${row.data.duration} weeks`}</div>
+
+                        <div className="products-content">
+                          <p>
+                            <span>
+                              <img src="https://www.flaticon.com/svg/vstatic/svg/3914/3914115.svg?token=exp=1708181620~hmac=dd6f54e0606515f91b8d06f2106ff06c" alt="logo-points"></img>{" "}
+                            </span>
+                            {row.data.detail1}
+                          </p>
+                          <p>
+                            <span>
+                              <img src="https://www.flaticon.com/svg/vstatic/svg/3914/3914115.svg?token=exp=1708181620~hmac=dd6f54e0606515f91b8d06f2106ff06c" alt="logo-points"></img>{" "}
+                            </span>
+                            {row.data.detail2}
+                          </p>
+                          <p>
+                            <span>
+                              <img src="https://www.flaticon.com/svg/vstatic/svg/3914/3914115.svg?token=exp=1708181620~hmac=dd6f54e0606515f91b8d06f2106ff06c" alt="logo-points"></img>{" "}
+                            </span>
+                            {row.data.detail3}
+                          </p>
                         </div>
+
                         <div className="product-price-box">
                           <div className="product-price">
-                            {"₹" + row.data.price}{" "}
-                            <s className="price-cut">₹4990</s>
+                            {/* {"₹" + row.data.price}{" "}
+                            <s className="price-cut">₹4990</s> */}
+                            <div className="rating-box">
+                              <div className="product-rating">
+                                {row.data.rating}
+                              </div>
+                              <div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                  className="product-rating-star"
+                                >
+                                  <path
+                                    fill="#FFD43B"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
                           <div className="know-more-box">
                             <div className="know-more">Know more</div>
@@ -94,9 +111,8 @@ export class Products extends React.Component {
                         </div>
                       </div>
                     </a>
-                    </AnimatedOnScroll>
-                  </Link>
-                
+                  </AnimatedOnScroll>
+                </Link>
               );
             })}
           </div>
