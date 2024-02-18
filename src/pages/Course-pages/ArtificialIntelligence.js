@@ -24,7 +24,7 @@ export class ArtificialIntelligence extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("Artificial Intelligence")
+      equalTo("Frontend Developer")
     );
 
     onValue(dbref, (snapshot) => {

@@ -24,7 +24,7 @@ export class Python extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("Programming in Python")
+      equalTo("Cyber Threat Analyst")
     );
 
     onValue(dbref, (snapshot) => {

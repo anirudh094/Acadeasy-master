@@ -10,7 +10,7 @@ export default function HomePage() {
 
       <div className="first-banner-0">
         <div className="first-banner">
-          <div className="rotating-heading main-color"></div>
+          <div className="rotating-heading"></div>
           <div className="fixed-heading">
             At Acadezy you will not just get the best theoretical education, but
             we will also give you the required skills, and industry exposure to

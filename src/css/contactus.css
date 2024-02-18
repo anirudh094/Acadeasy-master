@@ -14,3 +14,8 @@
     border-color: #3A5F69;
     color: #3A5F69;
   }
+.error-message{
+  text-align: center !important;
+  color: red;
+  font-weight: bolder;
+}

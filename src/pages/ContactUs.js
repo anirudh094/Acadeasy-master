@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "../css/contactus.css";
 import Testimonials from "./Testimonials";
-import Partners from "./Partners.js";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 const ContactUs = () => {
   const [user, setUser] = useState({
     name: "",
     email: "",
-    phoneNumber: '',
+    phonenumber: "",
     message: "",
   });
+  const [errorMsg, setErrorMsg] = useState("");
 
   let name, value;
   const getUserData = (event) => {
@@ -23,11 +23,11 @@ const ContactUs = () => {
   const postData = async (e) => {
     e.preventDefault();
 
-    const { name, email, phoneNumber, message } = user;
+    const { name, email, phonenumber, message } = user;
 
-    if (name && email && phoneNumber && message) {
+    if (name && email && phonenumber && message) {
       const res = await fetch(
-        "https://react01-9666b-default-rtdb.firebaseio.com/acadezy.json",
+        "https://acad-easy-default-rtdb.firebaseio.com/acadeasy.json",
         {
           method: "POST",
           headers: {
@@ -36,7 +36,7 @@ const ContactUs = () => {
           body: JSON.stringify({
             name,
             email,
-            phoneNumber,
+            phonenumber,
             message,
           }),
         }
@@ -46,52 +46,16 @@ const ContactUs = () => {
         setUser({
           name: "",
           email: "",
-          phoneNumber: '',
+          phonenumber: "",
           message: "",
         });
-
-        alert("Our team will contact you shortly");
-        window.location.reload(true);
+        setErrorMsg("Our team will contact you shortly");
+        //alert("Our team will contact you shortly");
       }
     } else {
-      alert("Fill all data");
+      setErrorMsg("Fill all fields");
     }
   };
-
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUser({
-      ...user,
-      [name]: value
-    });
-  };
-  const handleSubmit = (e) => { e.preventDefault();
-    const validationErrors = {};
-    if (!user.name.match(/^[a-zA-Z\s]+$/)) {
-      validationErrors.name = 'Name must only contain letters and spaces.';
-    }
-
-    if (!user.phoneNumber.match(/^\d+$/)) {
-      validationErrors.phoneNumber = 'Contact number must only contain numbers.';
-    }
-
-    if (!user.email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
-      validationErrors.email = 'Invalid email address.';
-    }
-
-    if (Object.keys(validationErrors).length === 0) {
-      // Send data to backend
-      // sendDataToBackend(formData);
-      setUser({ name: '', phoneNumber: '', email: '' });
-      setErrors({});
-      alert('Form submitted successfully!');
-    } else {
-      setErrors(validationErrors);
-    }
-  };
-
 
   return (
     <>
@@ -185,7 +149,7 @@ const ContactUs = () => {
               </div>
               <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
                 <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
-                  <form onSubmit={handleSubmit}>
+                  <form>
                     <div className="mb-6">
                       <input
                         type="text"
@@ -193,12 +157,10 @@ const ContactUs = () => {
                         placeholder="Your Name"
                         aria-label="text"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        value={user.name}
-                        // onChange={getUserData}
-                        onChange={handleChange}
+                        value={user.task}
+                        onChange={getUserData}
                         required
                       />
-                      {errors.name && <span className="error">{errors.name}</span>}
                     </div>
                     <div className="mb-6">
                       <input
@@ -207,26 +169,22 @@ const ContactUs = () => {
                         placeholder="Your Email"
                         aria-label="text"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        value={user.email}
-                        // onChange={getUserData}
-                        onChange={handleChange}
+                        value={user.task}
+                        onChange={getUserData}
                         required
                       />
-                       {errors.email && <span className="error">{errors.email}</span>}
                     </div>
                     <div className="mb-6">
                       <input
                         type="number"
                         name="phonenumber"
                         placeholder="Your Phone"
-                        aria-label="number"
+                        aria-label="text"
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                        value={user.phoneNumber}
-                        // onChange={getUserData}
-                        onChange={handleChange}
+                        value={user.task}
+                        onChange={getUserData}
                         required
                       />
-                      {errors.phoneNumber && <span className="error">{errors.phoneNumber}</span>}
                     </div>
                     <div className="mb-6">
                       <textarea
@@ -240,6 +198,7 @@ const ContactUs = () => {
                         required
                       ></textarea>
                     </div>
+                    <p className="error-message">{errorMsg}</p>
                     <div>
                       <button
                         type="submit"
@@ -1066,7 +1025,6 @@ const ContactUs = () => {
       </AnimatedOnScroll>
 
       <Testimonials />
-      <Partners />
     </>
   );
 };

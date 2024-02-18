@@ -15,8 +15,6 @@ body {
 }
 
 .navbar,.rs-navbar-default {
-  /* background-color: #b2d8d8;
-  background-image: linear-gradient(315deg, #159895 0%, #57C5B6 74%); */
   background-color: white;
   color: #008080;
   padding: 5px 2px;
@@ -27,15 +25,15 @@ body {
   text-decoration-color: #008080 !important;
 }
 .rs-drawer-body{
-  background-color: #4d5dfb;
-  background-image: linear-gradient(315deg, #159895 0%, #57C5B6 74%);
+  background-color: white;
 }
 .rs-navbar-brand {
   padding: 0px 0px 0px 0px!important;
 }
 .logo svg{
   width: 200px;
-  margin: 6px 20px;
+  height: 55px;
+  margin: 0px 20px;
 }
 .rs-navbar-item:hover{
   background-color: transparent !important;
@@ -53,21 +51,22 @@ body {
 
 .nav-links-login{
   width: 130px;
-  color: #04042c !important;
+  color: white !important;
   border-radius: 10px;
-  padding: 2px;
+  padding: 4px 2px;
   text-align: center;
   margin-left: 10px;
   display: block;
-  background-color: white;
+  background-color: #008080;
 }
 .rs-btn,.rs-btn:hover,.rs-btn:focus{
   background-color: transparent;
   margin: 6px 0px;
 }
-.nav-links-login:hover{
+.nav-links-login:hover,.nav-links-login:focus{
   background-color: white;
-  color: #3A5F69;
+  border: 2px solid #008080;
+  color: #008080 !important;
 }
 .menu-side-bar{
   display: none;
@@ -105,13 +104,13 @@ footer {
 }
 
 .main-color {
-  /* background: linear-gradient(315deg, #66b2b2 0%, #008080 74%);
+  background: linear-gradient(315deg, #66b2b2 0%, #008080 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: border-box/padding-box/content-box/initial/inherit;
-  background-color: #66b2b2; */
-  color: white;
+  background-color: #66b2b2;
 }
+
 .heading{
   font-weight: 800;
   font-size: 250%;

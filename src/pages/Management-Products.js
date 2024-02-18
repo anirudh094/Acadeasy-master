@@ -3,13 +3,11 @@ import "../css/products.css";
 import { Link } from "react-router-dom";
 import StartFirebase from "./firebaseconfig_products";
 import { ref, onValue } from "firebase/database";
-import ContactUs from "./ContactUs";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
-import { ManagementProducts } from "./Management-Products";
 
 const db = StartFirebase();
 
-export class Products extends React.Component {
+export class ManagementProducts extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -18,7 +16,7 @@ export class Products extends React.Component {
   }
 
   componentDidMount() {
-    const dbref = ref(db, "Courses");
+    const dbref = ref(db, "ManagementCourses");
 
     onValue(dbref, (snapshot) => {
       let records = [];
@@ -35,7 +33,7 @@ export class Products extends React.Component {
     return (
       <>
         <div className="products-container">
-          <div className="heading main-color">Technical Projects We Offer</div>
+          <div className="heading main-color">Management Projects We Offer</div>
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {this.state.tableData.map((row, index) => {
               return (
@@ -103,8 +101,6 @@ export class Products extends React.Component {
             })}
           </div>
         </div>
-        <ManagementProducts />
-        <ContactUs />
       </>
     );
   }

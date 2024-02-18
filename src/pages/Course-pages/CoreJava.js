@@ -24,7 +24,7 @@ export class CoreJava extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("Core Java")
+      equalTo("Java Developer")
     );
 
     onValue(dbref, (snapshot) => {

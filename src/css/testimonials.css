@@ -4,6 +4,9 @@
     background-color: #04042C;
     padding: 30px 30px 20px;
 }
+.testimonial-heading{
+    color: white;
+}
 .carousel {
     background-color: #04042C;
     height: fit-content;
