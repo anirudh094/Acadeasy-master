@@ -20,7 +20,7 @@
   height: 216px;
 }
 .product-name,.product-author,.rating-box,.products-content{
-  margin: 5px 10px 0px 10px;
+  margin: 10px !important;
 }
 .products-content p{
   margin: 0px !important;
