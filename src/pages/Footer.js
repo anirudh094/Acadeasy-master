@@ -3,6 +3,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../css/footer.css";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 function FooterBar() {
   return (
@@ -10,11 +13,12 @@ function FooterBar() {
     <footer className=" p-3 footer-body">
       <Row className="footer-content">
         <Col md={22} lg={10}>
-          <h5 className=" mb-3 footer-heading" >Acadeasy</h5>
+          <h5 className=" mb-3 footer-heading" >ACADEASY: Unlocking Your Tech Potential</h5>
           <p className="text">
-          Join Our Community of Educators!
-         At Acadeasy, we're committed to empowering educators with the knowledge and skills they need to thrive in the digital age. 
-        Explore our training programs and live projects designed to enhance your teaching expertise and engage your students like never before.
+         
+
+ACADEASY is the ultimate edtech platform designed to empower you with the skills and knowledge you need to succeed in the tech industry.
+ Our innovative training programs and hands-on projects are tailored to meet the demands of the ever-evolving tech landscape.
 
           </p>
         </Col>
@@ -44,18 +48,18 @@ function FooterBar() {
             <ListGroup.Item className="bg-none px-0 text-white">
               <a href="#contactus" className="footer-content-links"> Contact </a></ListGroup.Item>
           </ListGroup>
-
+         
         </Col>
         <Col md={6} lg={3}>
-          <h5 className="mb-3 footer-links">Links</h5>
+          <h5 className="mb-3 footer-links">Contact Us</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
-             <a href="#contactus" className="footer-content-links"> Frequently Asked Questions</a>
+             <a href="#contactus" className="footer-content-links"><FaInstagram size={30}/> </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">Courses Available</a></ListGroup.Item>
+              <a href="#contactus" className="footer-content-links"><FaLinkedin size={30} /></a></ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links"> Contact </a></ListGroup.Item>
+              <a href="#contactus" className="footer-content-links"> <FaFacebook size={30} /> </a></ListGroup.Item>
           </ListGroup>
         </Col>
 

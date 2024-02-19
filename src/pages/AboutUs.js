@@ -228,7 +228,7 @@ const AboutUs = () => {
         </AnimatedOnScroll>
       </div>
       <Testimonials />
-      <Partners />
+      {/* <Partners /> */}
     </>
   );
 };

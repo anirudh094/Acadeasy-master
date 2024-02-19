@@ -12,13 +12,56 @@ const ContactUs = () => {
   });
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [phoneNumberValid, setPhoneNumberValid] = useState(true);
+  const [emailValid, setEmailValid] = useState(true);
+
   let name, value;
   const getUserData = (event) => {
     name = event.target.name;
     value = event.target.value;
 
+    if (name === "phonenumber") {
+      if (value.length !== 10) {
+        setPhoneNumberValid(false);
+      } else {
+        setPhoneNumberValid(true);
+      }
+    } else if (name === "email") {
+      // Perform email validation here
+      // For simplicity, you can use a basic regex pattern for email validation
+      const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+      if (!emailPattern.test(value)) {
+        setEmailValid(false);
+      } else {
+        setEmailValid(true);
+      }
+    }
+  
     setUser({ ...user, [name]: value });
   };
+
+    
+  //   if (name === "phonenumber" && value.length !== 10) {
+  //     setPhoneNumberValid(false);
+  //   } else {
+  //     setPhoneNumberValid(true);
+  //     setUser({ ...user, [name]: value });
+  //   }
+  //  } else if (name === "email") {
+  //     // Perform email validation here
+  //     // For simplicity, you can use a basic regex pattern for email validation
+  //     const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  //     if (!emailPattern.test(value)) {
+  //       setEmailValid(false);
+  //     } else {
+  //       setEmailValid(true);
+  //     }
+  //   }
+
+  //   setUser({ ...user, [name]: value });
+  // };
+
+  
 
   const postData = async (e) => {
     e.preventDefault();
@@ -49,13 +92,14 @@ const ContactUs = () => {
           phonenumber: "",
           message: "",
         });
-        setErrorMsg("Our team will contact you shortly");
+        setErrorMsg(<span style={{ color: 'green' }}>Our team will contact you shortly</span>);
         //alert("Our team will contact you shortly");
       }
     } else {
-      setErrorMsg("Fill all fields");
+      setErrorMsg(<span style={{ color: 'red' }}>Fill all fields</span>);
     }
   };
+
 
   return (
     <>
@@ -70,30 +114,23 @@ const ContactUs = () => {
                 <div className="mb-4 max-w-[570px] lg:mb-0">
                   <h1 className="heading main-color">GET IN TOUCH WITH US</h1>
                   <p className="text-body-color mb-9 text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam eget sapien sit amet nunc accumsan consectetur.
-                    Curabitur euismod convallis neque, vitae placerat turpis
-                    interdum eget. Quisque auctor metus eu nulla consectetur,
-                    sed eleifend turpis fermentum. Ut euismod lorem vitae justo
-                    ullamcorper, quis sagittis nunc convallis. Integer sed elit
-                    id libero suscipit efficitur.
-                    <ul className="p-0">
-                      <li>courses offered</li>
-                      <li>registeration</li>
-                      <li> payment menthods</li>
-                      <li>internship and stipend criteria</li>
-                      <li>other queries</li>
-                    </ul>
+                    At <span style={{ color: '#008080', fontSize: '18px', fontWeight: 'Bold' }}>ACADEASY</span>, we believe in making learning not only accessible but also enjoyable and effective. Our cutting-edge platform offers a seamless blend of interactive courses, hands-on projects, and personalized mentorship, ensuring that every step you take with us propels you closer to your goals.
+                    <br></br>
+                    With a diverse range of courses spanning from foundational subjects to advanced specialties.
+                    <br></br><span style={{ color: '#008080', fontSize: '18px', fontWeight: 'Bold' }}>ACADEASY</span> caters to learners of all levels and interests. Whether you're a novice eager to explore new horizons or a seasoned professional looking to stay ahead of the curve, our curated curriculum and engaging content have something for everyone.
+
+                    We don't just stop at teaching concepts; we believe in the power of practical application. That's why our platform is designed to immerse you in real-world projects and simulations, giving you the opportunity to put your skills to the test and gain valuable hands-on experience that employers crave.
+
                   </p>
                   <div className="mb-8 flex w-full max-w-[370px]">
                     <div className="main-color bg-dark mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
                       <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
+                        width="28"
+                        height="19"
+                        viewBox="0 0 28 19"
                         className="fill-current"
                       >
-                        <path d="M21.8182 24H16.5584C15.3896 24 14.4156 23.0256 14.4156 21.8563V17.5688C14.4156 17.1401 14.0649 16.7893 13.6364 16.7893H10.4026C9.97403 16.7893 9.62338 17.1401 9.62338 17.5688V21.8173C9.62338 22.9866 8.64935 23.961 7.48052 23.961H2.14286C0.974026 23.961 0 22.9866 0 21.8173V8.21437C0 7.62972 0.311688 7.08404 0.818182 6.77223L11.1039 0.263094C11.6494 -0.0876979 12.3896 -0.0876979 12.9351 0.263094L23.2208 6.77223C23.7273 7.08404 24 7.62972 24 8.21437V21.7783C24 23.0256 23.026 24 21.8182 24ZM10.3636 15.4251H13.5974C14.7662 15.4251 15.7403 16.3995 15.7403 17.5688V21.8173C15.7403 22.246 16.0909 22.5968 16.5195 22.5968H21.8182C22.2468 22.5968 22.5974 22.246 22.5974 21.8173V8.25335C22.5974 8.13642 22.5195 8.01949 22.4416 7.94153L12.1948 1.4324C12.0779 1.35445 11.9221 1.35445 11.8442 1.4324L1.55844 7.94153C1.44156 8.01949 1.4026 8.13642 1.4026 8.25335V21.8563C1.4026 22.285 1.75325 22.6358 2.18182 22.6358H7.48052C7.90909 22.6358 8.25974 22.285 8.25974 21.8563V17.5688C8.22078 16.3995 9.19481 15.4251 10.3636 15.4251Z" />
+                        <path d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z" />
                       </svg>
                     </div>
                     <div className="w-full">
@@ -101,7 +138,7 @@ const ContactUs = () => {
                         mail us at
                       </h4>
                       <p className="text-body-color text-base">
-                        edintern24@gmail.com
+                        acadeasy24@gmail.com
                       </p>
                     </div>
                   </div>
@@ -129,20 +166,15 @@ const ContactUs = () => {
                   </div>
                   <div className="mb-8 flex w-full max-w-[370px]">
                     <div className="main-color bg-dark mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
-                      <svg
-                        width="28"
-                        height="19"
-                        viewBox="0 0 28 19"
-                        className="fill-current"
-                      >
-                        <path d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z" />
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="26" viewBox="0 0 50 50">
+                        <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 14 11.011719 C 12.904779 11.011719 11.919219 11.339079 11.189453 11.953125 C 10.459687 12.567171 10.011719 13.484511 10.011719 14.466797 C 10.011719 16.333977 11.631285 17.789609 13.691406 17.933594 A 0.98809878 0.98809878 0 0 0 13.695312 17.935547 A 0.98809878 0.98809878 0 0 0 14 17.988281 C 16.27301 17.988281 17.988281 16.396083 17.988281 14.466797 A 0.98809878 0.98809878 0 0 0 17.986328 14.414062 C 17.884577 12.513831 16.190443 11.011719 14 11.011719 z M 14 12.988281 C 15.392231 12.988281 15.94197 13.610038 16.001953 14.492188 C 15.989803 15.348434 15.460091 16.011719 14 16.011719 C 12.614594 16.011719 11.988281 15.302225 11.988281 14.466797 C 11.988281 14.049083 12.140703 13.734298 12.460938 13.464844 C 12.78117 13.19539 13.295221 12.988281 14 12.988281 z M 11 19 A 1.0001 1.0001 0 0 0 10 20 L 10 39 A 1.0001 1.0001 0 0 0 11 40 L 17 40 A 1.0001 1.0001 0 0 0 18 39 L 18 33.134766 L 18 20 A 1.0001 1.0001 0 0 0 17 19 L 11 19 z M 20 19 A 1.0001 1.0001 0 0 0 19 20 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 29 C 27 28.170333 27.226394 27.345035 27.625 26.804688 C 28.023606 26.264339 28.526466 25.940057 29.482422 25.957031 C 30.468166 25.973981 30.989999 26.311669 31.384766 26.841797 C 31.779532 27.371924 32 28.166667 32 29 L 32 39 A 1.0001 1.0001 0 0 0 33 40 L 39 40 A 1.0001 1.0001 0 0 0 40 39 L 40 28.261719 C 40 25.300181 39.122788 22.95433 37.619141 21.367188 C 36.115493 19.780044 34.024172 19 31.8125 19 C 29.710483 19 28.110853 19.704889 27 20.423828 L 27 20 A 1.0001 1.0001 0 0 0 26 19 L 20 19 z M 12 21 L 16 21 L 16 33.134766 L 16 38 L 12 38 L 12 21 z M 21 21 L 25 21 L 25 22.560547 A 1.0001 1.0001 0 0 0 26.798828 23.162109 C 26.798828 23.162109 28.369194 21 31.8125 21 C 33.565828 21 35.069366 21.582581 36.167969 22.742188 C 37.266572 23.901794 38 25.688257 38 28.261719 L 38 38 L 34 38 L 34 29 C 34 27.833333 33.720468 26.627107 32.990234 25.646484 C 32.260001 24.665862 31.031834 23.983076 29.517578 23.957031 C 27.995534 23.930001 26.747519 24.626988 26.015625 25.619141 C 25.283731 26.611293 25 27.829667 25 29 L 25 38 L 21 38 L 21 21 z"></path>
                       </svg>
                     </div>
                     <div className="w-full">
                       <h4 className="main-color mb-1 text-xl font-bold">
                         LinkedIn
                       </h4>
-                      <p className="text-body-color text-base">Acadezy</p>
+                      <p className="text-body-color text-base">Acadeasy</p>
                     </div>
                   </div>
                 </div>
@@ -174,6 +206,9 @@ const ContactUs = () => {
                         required
                       />
                     </div>
+                    {!emailValid && (
+  <p className="error-message" style={{ color: 'blue' }}>Enter a valid email address</p>
+)}
                     <div className="mb-6">
                       <input
                         type="number"
@@ -184,8 +219,12 @@ const ContactUs = () => {
                         value={user.task}
                         onChange={getUserData}
                         required
+                        maxLength={10}
                       />
                     </div>
+                    {!phoneNumberValid && (
+                      <p className="error-message">Enter correct phone number</p>)}
+
                     <div className="mb-6">
                       <textarea
                         rows="6"
@@ -195,10 +234,10 @@ const ContactUs = () => {
                         className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                         value={user.task}
                         onChange={getUserData}
-                        required
+
                       ></textarea>
                     </div>
-                    <p className="error-message">{errorMsg}</p>
+                    <p className="error-message" style={{ color: 'blue' }}>{errorMsg}</p>
                     <div>
                       <button
                         type="submit"
