@@ -10,6 +10,11 @@
 
 }
 
+.footer-content{
+    column-gap: 90px;
+    
+}
+
 .footer-heading{
     color: #A6C8D8;
     justify-content: center;

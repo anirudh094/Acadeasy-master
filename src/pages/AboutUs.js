@@ -227,6 +227,7 @@ const AboutUs = () => {
         </AnimatedOnScroll>
       </div>
       <Testimonials />
+
     </>
   );
 };

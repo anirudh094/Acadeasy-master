@@ -12,9 +12,8 @@ export default function HomePage() {
         <div className="first-banner">
           <div className="rotating-heading"></div>
           <div className="fixed-heading">
-            At Acadezy you will not just get the best theoretical education, but
-            we will also give you the required skills, and industry exposure to
-            be successful in your field
+          Welcome to ACADEASY, where learning meets innovation to transform your educational journey. We're not just another edtech platform; 
+          we're your partners in success, dedicated to providing unparalleled training and project experiences tailored to your unique aspirations.
           </div>
           <div className="banner-button-wrapper">
             <a className="banner-button-cta" href="#contactus">
