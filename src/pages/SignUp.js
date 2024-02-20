@@ -15,6 +15,8 @@ const SignUp = () => {
   const [emailSignIn, setEmailSignIn] = useState("");
   const [passwordSignIn, setPasswordSignIn] = useState("");
 
+  const [errorMsg, setErrorMsg] = useState("");
+
   const [activeTab, setActiveTab] = useState("signIn");
 
   const handleTabChange = (tab) => {
@@ -31,6 +33,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
+        setErrorMsg("INVALID");
       });
   };
 
@@ -45,6 +48,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
+        setErrorMsg("INVALID");
       });
   };
 
@@ -52,47 +56,119 @@ const SignUp = () => {
     <>
       <div className="login-wrap">
         <div className="login-html">
-          <input id="tab-1" type="radio" name="tab" className="sign-in" checked={activeTab === "signIn"} onChange={() => handleTabChange("signIn")} />
-          <label htmlFor="tab-1" className="tab">Sign In</label>
-          <input id="tab-2" type="radio" name="tab" className="sign-up" checked={activeTab === "signUp"} onChange={() => handleTabChange("signUp")} />
-          <label htmlFor="tab-2" className="tab">Sign Up</label>
+          <input
+            id="tab-1"
+            type="radio"
+            name="tab"
+            className="sign-in"
+            checked={activeTab === "signIn"}
+            onChange={() => handleTabChange("signIn")}
+          />
+          <label htmlFor="tab-1" className="tab">
+            Sign In
+          </label>
+          <input
+            id="tab-2"
+            type="radio"
+            name="tab"
+            className="sign-up"
+            checked={activeTab === "signUp"}
+            onChange={() => handleTabChange("signUp")}
+          />
+          <label htmlFor="tab-2" className="tab">
+            Sign Up
+          </label>
           <div className="login-form">
-            <form className="sign-in-htm" onSubmit={signIn} style={{ display: activeTab === "signIn" ? "block" : "none" }}>
+            <form
+              className="sign-in-htm"
+              onSubmit={signIn}
+              style={{ display: activeTab === "signIn" ? "block" : "none" }}
+            >
               <div className="group">
-                <label htmlFor="emailSignIn" className="label">Email</label>
-                <input id="emailSignIn" type="email" className="input" value={emailSignIn} onChange={(e) => setEmailSignIn(e.target.value)} />
+                <label htmlFor="emailSignIn" className="label">
+                  Email
+                </label>
+                <input
+                  id="emailSignIn"
+                  type="email"
+                  className="input"
+                  value={emailSignIn}
+                  onChange={(e) => setEmailSignIn(e.target.value)}
+                />
               </div>
               <div className="group">
-                <label htmlFor="passSignIn" className="label">Password</label>
-                <input id="passSignIn" type="password" className="input" data-type="password" value={passwordSignIn} onChange={(e) => setPasswordSignIn(e.target.value)} />
+                <label htmlFor="passSignIn" className="label">
+                  Password
+                </label>
+                <input
+                  id="passSignIn"
+                  type="password"
+                  className="input"
+                  data-type="password"
+                  value={passwordSignIn}
+                  onChange={(e) => setPasswordSignIn(e.target.value)}
+                />
               </div>
               <div className="group">
                 <input type="submit" className="button" value="Sign In" />
               </div>
+              <p className="login-error-message">
+                {errorMsg}
+              </p>
               <div className="hr"></div>
               <div className="group">
-                <div className="button google-button"><GoogleLogin /></div>
+                <div className="button google-button">
+                  <GoogleLogin />
+                </div>
               </div>
             </form>
-            <form className="sign-up-htm" onSubmit={signUp} style={{ display: activeTab === "signUp" ? "block" : "none" }}>
+            <form
+              className="sign-up-htm"
+              onSubmit={signUp}
+              style={{ display: activeTab === "signUp" ? "block" : "none" }}
+            >
               <div className="group">
-                <label htmlFor="userSignUp" className="label">Username</label>
+                <label htmlFor="userSignUp" className="label">
+                  Username
+                </label>
                 <input id="userSignUp" type="text" className="input" />
               </div>
               <div className="group">
-                <label htmlFor="emailSignUp" className="label">Email Address</label>
-                <input id="emailSignUp" type="text" className="input" value={emailSignUp} onChange={(e) => setEmailSignUp(e.target.value)} />
+                <label htmlFor="emailSignUp" className="label">
+                  Email Address
+                </label>
+                <input
+                  id="emailSignUp"
+                  type="text"
+                  className="input"
+                  value={emailSignUp}
+                  onChange={(e) => setEmailSignUp(e.target.value)}
+                />
               </div>
               <div className="group">
-                <label htmlFor="passSignUp" className="label">Password</label>
-                <input id="passSignUp" type="password" className="input" data-type="password" value={passwordSignUp} onChange={(e) => setPasswordSignUp(e.target.value)} />
+                <label htmlFor="passSignUp" className="label">
+                  Password
+                </label>
+                <input
+                  id="passSignUp"
+                  type="password"
+                  className="input"
+                  data-type="password"
+                  value={passwordSignUp}
+                  onChange={(e) => setPasswordSignUp(e.target.value)}
+                />
               </div>
               <div className="group">
                 <input type="submit" className="button" value="Sign Up" />
               </div>
+              <p className="login-error-message">
+                {errorMsg}
+              </p>
               <div className="hr"></div>
               <div className="group">
-                <div className="button google-button"><GoogleLogin /></div>
+                <div className="button google-button">
+                  <GoogleLogin />
+                </div>
               </div>
             </form>
           </div>
