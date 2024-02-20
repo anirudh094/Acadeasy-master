@@ -13,36 +13,31 @@ const AboutUs = () => {
           <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12 remove-flex-sm">
             <div className="w-full lg:w-6/12">
               <h2 className="orange-text w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 ">
-                Acadezy provides industry ready internship courses to college
-                students.
+                Acadezy provides industry ready project based courses 
+                
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                eget sapien sit amet nunc accumsan consectetur. Curabitur
-                euismod convallis neque, vitae placerat turpis interdum eget.
-                Quisque auctor metus eu nulla consectetur, sed eleifend turpis
-                fermentum. Ut euismod lorem vitae justo ullamcorper, quis
-                sagittis nunc convallis. Integer sed elit id libero suscipit
-                efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Nullam eget sapien sit amet nunc accumsan consectetur.
-                Curabitur euismod convallis neque, vitae placerat turpis
-                interdum eget. Quisque auctor metus eu nulla consectetur, sed
-                eleifend turpis fermentum. Ut euismod lorem vitae justo
-                ullamcorper, quis sagittis nunc convallis. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Nullam eget sapien sit amet
-                nunc accumsan consectetur. Curabitur euismod convallis neque,
-                vitae placerat turpis interdum eget. Quisque auctor metus eu
-                nulla consectetur, sed eleifend turpis fermentum. Ut euismod
-                lorem vitae justo ullamcorper, quis sagittis nunc convallis.
-                Integer sed elit id libero suscipit efficitur. Integer sed elit
-                id libero suscipit efficitur.
+              
+Welcome to Acadeasy, where we pave the path to success for college students seeking to enhance their skill sets and 
+transition seamlessly into the professional world.
+<br></br> <br></br> At Acadeasy, we specialize in providing online project-based courses
+ meticulously crafted to empower students with practical knowledge and hands-on experience. Our mission is to bridge the
+  gap between academia and industry by offering a diverse range of courses designed to meet the evolving demands of various sectors. 
+ <br></br> Whether you're looking to sharpen your programming prowess, refine your design skills, or delve into the intricacies of data analysis,
+   Acadeasy is your ultimate destination. Our team of seasoned professionals and educators is dedicated to guiding you through an 
+   immersive learning journey, equipping you with the expertise and confidence to thrive in today's competitive landscape.
+   <br></br> Join us at Acadeasy and
+ unlock your full potential as you embark on a transformative educational experience tailored to propel you towards professional excellence.
               </p>
             </div>
-            <div className="w-full lg:w-6/12">
+            <div className=" lg:w-3/12">
               <img
-                className="lg:block hidden w-full"
-                src="images/edintern.png"
-                alt="grocery"
+                className="  aboutus-image"
+                src="images/giphyabout.gif"
+                alt="student"
+                width={1800}
+                // height={160}
+                
               />
               <img
                 className="lg:hidden sm:block hidden w-full"
@@ -64,21 +59,11 @@ const AboutUs = () => {
                 Our Mission
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                eget sapien sit amet nunc accumsan consectetur. Curabitur
-                euismod convallis neque, vitae placerat turpis interdum eget.
-                Quisque auctor metus eu nulla consectetur, sed eleifend turpis
-                fermentum. Ut euismod lorem vitae justo ullamcorper, quis
-                sagittis nunc convallis. Integer sed elit id libero suscipit
-                efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Nullam eget sapien sit amet nunc accumsan consectetur.
-                Curabitur euismod convallis neque, vitae placerat turpis
-                interdum eget. Quisque auctor metus eu nulla consectetur, sed
-                eleifend turpis fermentum. Ut euismod lorem vitae justo
-                ullamcorper, quis sagittis nunc convallis. Integer sed elit id
-                libero suscipit efficitur.
+              
+At Acadeasy, our mission is to empower college students with the skills and knowledge they need to excel in their careers. We believe that education should be practical, relevant, and accessible, which is why we offer online project-based courses designed to prepare students for the demands of the modern workforce. By combining cutting-edge curriculum with hands-on learning experiences, we aim to bridge the gap between academia and industry, ensuring that our students graduate with the expertise and confidence to succeed in their chosen fields. Our mission is to inspire lifelong learning,
+ foster creativity, and cultivate a community of ambitious individuals committed to personal and professional growth.
               </p>
-              <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">
+              {/* <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 eget sapien sit amet nunc accumsan consectetur. Curabitur
                 euismod convallis neque, vitae placerat turpis interdum eget.
@@ -86,7 +71,7 @@ const AboutUs = () => {
                 fermentum. Ut euismod lorem vitae justo ullamcorper, quis
                 sagittis nunc convallis. Integer sed elit id libero suscipit
                 efficitur.
-              </p>
+              </p> */}
             </div>
             <div className="w-full lg:w-6/12">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
