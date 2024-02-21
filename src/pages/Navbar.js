@@ -62,7 +62,7 @@ function NavbarHeader () {
           <div>
             {authUser ? (
               <>
-                <Link className="nav-links nav-links-login" to={"/dashboard"}>
+                <Link className="nav-links nav-links-login" onClick={userSignOut}>
                   Log Out
                 </Link>
               </>
