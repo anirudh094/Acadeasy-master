@@ -4,10 +4,14 @@ import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import {Products} from "./Products";
 import SignUp from "./SignUp";
-import {ArtificialIntelligence} from "./Course-pages/ArtificialIntelligence";
-import {CoreJava} from "./Course-pages/CoreJava";
-import {Python} from "./Course-pages/Python";
-import {WebDevelopment} from "./Course-pages/WebDevelopment";
+import {FrontendDeveloper} from "./Course-pages/FrontendDeveloper";
+import {JavaDeveloper} from "./Course-pages/JavaDeveloper";
+import {CyberThreatAnalyst} from "./Course-pages/CyberThreatAnalyst";
+import {ReactJsDeveloper} from "./Course-pages/ReactJsDeveloper";
+import { BusinessAnalyst } from "./Course-pages/BusinessAnalyst";
+import { DataEngineer } from "./Course-pages/DataEngineer";
+import { FinancialAnalyst } from "./Course-pages/FinancialAnalyst";
+import { StaffingEngineer } from "./Course-pages/StaffingEngineer";
 import Dashboard from "./UserDashboard";
 
 const NavigationalRoutes = () => {
@@ -18,10 +22,14 @@ const NavigationalRoutes = () => {
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/products" element={<Products />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/artificialintelligence" element={<ArtificialIntelligence />} />
-      <Route path="/corejava" element={<CoreJava />} />
-      <Route path="/programminginpython" element={<Python/>} />
-      <Route path="/webdevelopment" element={<WebDevelopment />} />
+      <Route path="/FrontendDeveloper" element={<FrontendDeveloper />} />
+      <Route path="/JavaDeveloper" element={<JavaDeveloper />} />
+      <Route path="/CyberThreatAnalyst" element={<CyberThreatAnalyst/>} />
+      <Route path="/ReactJsDeveloper" element={<ReactJsDeveloper />} />
+      <Route path="/businessanalyst" element={<BusinessAnalyst />} />
+      <Route path="/dataengineer" element={<DataEngineer />} />
+      <Route path="/financialanalyst" element={<FinancialAnalyst />} />
+      <Route path="/staffingengineer" element={<StaffingEngineer />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );

@@ -65,6 +65,9 @@ function NavbarHeader () {
                 <Link className="nav-links nav-links-login" onClick={userSignOut}>
                   Log Out
                 </Link>
+                {/* <Link className="nav-links nav-links-login" to={"/dashboard"}>
+                  Log Out
+                </Link> */}
               </>
             ) : (
               <>
@@ -96,6 +99,9 @@ function NavbarHeader () {
                     <Link className="nav-links nav-links-login" onClick={userSignOut}>
                       Log Out
                     </Link>
+                    {/* <Link className="nav-links nav-links-login" to={"/dashboard"}>
+                      Log Out
+                    </Link> */}
                   </>
                 ) : (
                   <>
