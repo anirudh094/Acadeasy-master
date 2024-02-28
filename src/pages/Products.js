@@ -39,7 +39,7 @@ export class Products extends React.Component {
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {this.state.tableData.map((row, index) => {
               return (
-                <Link className="group product-group" to={row.data.href}>
+                <Link reloadDocument className="group product-group" to={row.data.href}>
                   <AnimatedOnScroll animationIn="bounce" duration="3000">
                     <a href={row.data.href} className="">
                       <div className="product-img">
