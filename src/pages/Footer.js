@@ -35,27 +35,27 @@ function FooterBar() {
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <Link
+                reloadDocument
                 className="footer-content-links"
                 to={"/products"}
-                onClick={() => window.location.reload()}
               >
                 Training
               </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <Link
+                reloadDocument
                 className="footer-content-links"
                 to={"/aboutus"}
-                onClick={() => window.location.reload()}
               >
                 About Us
               </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <Link
+                reloadDocument
                 className="footer-content-links"
                 to={"/contactus"}
-                onClick={() => window.location.reload()}
               >
                 Contact Us
               </Link>
@@ -67,21 +67,31 @@ function FooterBar() {
           <h5 className="mb-3  footer-links">Links</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                {" "}
-                Frequently Asked Questions{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/contactus"}
+              >
+                Frequently Asked Questions
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                Courses Available{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/products"}
+              >
+                Courses Available
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                {" "}
-                Contact{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/contactus"}
+              >
+                Contact
+              </Link>
             </ListGroup.Item>
           </ListGroup>
         </Col>
@@ -91,33 +101,36 @@ function FooterBar() {
             <ListGroup.Item className="bg-none px-0 text-white">
               <a
                 href="https://www.linkedin.com/company/acadeasy"
-                className="footer-content-links"
+                className="footer-content-links footersocial-media-links"
               >
-                <FaInstagram size={30} />{" "}
+                <FaInstagram size={30} />
+                <span> / Acadeasy</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <a
                 href="https://www.linkedin.com/company/acadeasy"
-                className="footer-content-links"
+                className="footer-content-links footersocial-media-links"
               >
                 <FaLinkedin size={30} />
+                <span> / Acadeasy</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <a
                 href="https://www.linkedin.com/company/acadeasy"
-                className="footer-content-links"
+                className="footer-content-links footersocial-media-links"
               >
                 {" "}
-                <FaFacebook size={30} />{" "}
+                <FaFacebook size={30} />
+                <span> / Acadeasy</span>
               </a>
             </ListGroup.Item>
           </ListGroup>
         </Col>
       </Row>
       <div className="text-center mt-2 text-white p-3">
-        © 2023 Copyright: Acadeasy.com
+        © 2024 Copyright: Acadeasy.com
       </div>
     </footer>
   );
