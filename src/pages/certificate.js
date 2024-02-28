@@ -1,11 +1,11 @@
 import React from "react";
 import "../css/certificate.css";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
+//import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 function Certificate() {
   return (
     <> 
-      <div className="certificate-body">
+      {/* <div className="certificate-body">
         <h1>Certifications</h1>
         <h3>
           On completion of a program each participant gets a course completion,
@@ -66,7 +66,7 @@ function Certificate() {
           </p>
         </div>
         </AnimatedOnScroll>
-      </div>
+      </div> */}
       
 
     </>

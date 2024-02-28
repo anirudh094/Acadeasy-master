@@ -14,6 +14,7 @@ const ContactUs = () => {
 
   const [phoneNumberValid, setPhoneNumberValid] = useState(true);
   const [emailValid, setEmailValid] = useState(true);
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   let name, value;
   const getUserData = (event) => {
@@ -23,6 +24,7 @@ const ContactUs = () => {
     if (name === "phonenumber") {
       if (value.length !== 10) {
         setPhoneNumberValid(false);
+        setSubmitButtonDisabled(false);
       } else {
         setPhoneNumberValid(true);
       }
@@ -32,6 +34,7 @@ const ContactUs = () => {
       const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
       if (!emailPattern.test(value)) {
         setEmailValid(false);
+        setSubmitButtonDisabled(false);
       } else {
         setEmailValid(true);
       }
@@ -40,32 +43,13 @@ const ContactUs = () => {
     setUser({ ...user, [name]: value });
   };
 
-  //   if (name === "phonenumber" && value.length !== 10) {
-  //     setPhoneNumberValid(false);
-  //   } else {
-  //     setPhoneNumberValid(true);
-  //     setUser({ ...user, [name]: value });
-  //   }
-  //  } else if (name === "email") {
-  //     // Perform email validation here
-  //     // For simplicity, you can use a basic regex pattern for email validation
-  //     const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-  //     if (!emailPattern.test(value)) {
-  //       setEmailValid(false);
-  //     } else {
-  //       setEmailValid(true);
-  //     }
-  //   }
-
-  //   setUser({ ...user, [name]: value });
-  // };
-
   const postData = async (e) => {
     e.preventDefault();
 
     const { name, email, phonenumber, message } = user;
 
-    if (name && email && phonenumber && message) {
+    if (name && email && phonenumber && message && phoneNumberValid && emailValid) {
+      setSubmitButtonDisabled(true);
       const res = await fetch(
         "https://acad-easy-default-rtdb.firebaseio.com/acadeasy.json",
         {
@@ -98,6 +82,7 @@ const ContactUs = () => {
       }
     } else {
       setErrorMsg(<span style={{ color: "red" }}>Fill all fields</span>);
+      setSubmitButtonDisabled(false);
     }
   };
 
@@ -166,7 +151,7 @@ const ContactUs = () => {
                     </div>
                     <div className="w-full">
                       <h4 className="main-color mb-1 text-xl font-bold">
-                        mail us at
+                        Mail Us At
                       </h4>
                       <p className="text-body-color text-base">
                         acadeasy24@gmail.com
@@ -289,6 +274,7 @@ const ContactUs = () => {
                         type="submit"
                         className="submit-btn"
                         onClick={postData}
+                        disabled={submitButtonDisabled}
                       >
                         Send Message
                       </button>
