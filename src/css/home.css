@@ -54,7 +54,6 @@
 .rotating-heading::before {
   content: "Learn. Create. Excel";
   animation-name: animate;
-  /* animation: typing 5s steps(20, end), lineBlink 1s infinite step-end; */
   animation-duration: 4.3s;
   animation-iteration-count: infinite;
   text-decoration-color: white !important;
@@ -62,9 +61,7 @@
 
 @keyframes animate {
   50% {
-    content: "Tech Education Redefined:ACADEASY";
-    color: #C0C0C0; 
-    /* background-image: linear-gradient(315deg, #66b2b2 0%, #008080 74%); */
-    
+    content: "Tech Education Redefined";
+    color: #C0C0C0;     
   }
 }

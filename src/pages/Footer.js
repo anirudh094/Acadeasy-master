@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -33,21 +34,24 @@ function FooterBar() {
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/products" className="footer-content-links">
+              {/* <a href="/products" className="footer-content-links">
                 Training
-              </a>
+              </a> */}
+              <Link className="footer-content-links" to={"/products"}>Training</Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/aboutus" className="footer-content-links">
+              {/* <a href="/aboutus" className="footer-content-links">
                 {" "}
                 About Us{" "}
-              </a>
+              </a> */}
+              <Link className="footer-content-links" to={"/aboutus"}>About Us</Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/contactus" className="footer-content-links">
+              {/* <a href="/contactus" className="footer-content-links">
                 {" "}
                 Contact Us{" "}
-              </a>
+              </a> */}
+              <Link className="footer-content-links" to={"/contactus"}>Contact Us</Link>
             </ListGroup.Item>
           </ListGroup>
         </Col>
