@@ -34,24 +34,31 @@ function FooterBar() {
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              {/* <a href="/products" className="footer-content-links">
+              <Link
+                className="footer-content-links"
+                to={"/products"}
+                onClick={() => window.location.reload()}
+              >
                 Training
-              </a> */}
-              <Link className="footer-content-links" to={"/products"}>Training</Link>
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              {/* <a href="/aboutus" className="footer-content-links">
-                {" "}
-                About Us{" "}
-              </a> */}
-              <Link className="footer-content-links" to={"/aboutus"}>About Us</Link>
+              <Link
+                className="footer-content-links"
+                to={"/aboutus"}
+                onClick={() => window.location.reload()}
+              >
+                About Us
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              {/* <a href="/contactus" className="footer-content-links">
-                {" "}
-                Contact Us{" "}
-              </a> */}
-              <Link className="footer-content-links" to={"/contactus"}>Contact Us</Link>
+              <Link
+                className="footer-content-links"
+                to={"/contactus"}
+                onClick={() => window.location.reload()}
+              >
+                Contact Us
+              </Link>
             </ListGroup.Item>
           </ListGroup>
         </Col>
@@ -82,17 +89,26 @@ function FooterBar() {
           <h5 className="mb-3 footer-links">Contact Us</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
+              <a
+                href="https://www.linkedin.com/company/acadeasy"
+                className="footer-content-links"
+              >
                 <FaInstagram size={30} />{" "}
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
+              <a
+                href="https://www.linkedin.com/company/acadeasy"
+                className="footer-content-links"
+              >
                 <FaLinkedin size={30} />
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
+              <a
+                href="https://www.linkedin.com/company/acadeasy"
+                className="footer-content-links"
+              >
                 {" "}
                 <FaFacebook size={30} />{" "}
               </a>
