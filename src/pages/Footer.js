@@ -6,7 +6,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "../css/footer.css";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 function FooterBar() {
   return (
@@ -100,11 +100,11 @@ function FooterBar() {
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
               <a
-                href="https://www.linkedin.com/company/acadeasy"
+                href="https://www.instagram.com/acadeasy_official/"
                 className="footer-content-links footersocial-media-links"
               >
                 <FaInstagram size={30} />
-                <span> / Acadeasy</span>
+                <span>Instagram</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
@@ -113,17 +113,17 @@ function FooterBar() {
                 className="footer-content-links footersocial-media-links"
               >
                 <FaLinkedin size={30} />
-                <span> / Acadeasy</span>
+                <span>LinkedIn</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
               <a
-                href="https://www.linkedin.com/company/acadeasy"
+                href="https://wa.me/message/RYPR7FF4OFLDO1"
                 className="footer-content-links footersocial-media-links"
               >
                 {" "}
-                <FaFacebook size={30} />
-                <span> / Acadeasy</span>
+                <FaWhatsapp size={30} />
+                <span>WhatsApp</span>
               </a>
             </ListGroup.Item>
           </ListGroup>
