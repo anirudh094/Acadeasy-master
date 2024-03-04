@@ -204,7 +204,7 @@ const ContactUs = () => {
                         Contact Number
                       </h4>
                       <p className="text-body-color text-base">
-                        +91 8884858050
+                        +91 8529780415
                       </p>
                     </div>
                   </div>

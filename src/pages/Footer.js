@@ -133,7 +133,7 @@ function FooterBar() {
           <p className="text">
            Address : C-265 New Loco Colony, Cantt Varanasi, Uttar Pradesh, Pin Code - 221002
           </p>
-          <p className="text">Phone No. : +91 8884858050</p>
+          <p className="text">Phone No. : +91 8529780415</p>
         </Col>
       </Row>
       <div className="text-center mt-2 text-white p-3">
