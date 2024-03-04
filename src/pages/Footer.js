@@ -128,6 +128,13 @@ function FooterBar() {
             </ListGroup.Item>
           </ListGroup>
         </Col>
+        <Col md={22} lg={10}>
+          <h5 className=" mb-3 footer-heading">Contant Info</h5>
+          <p className="text">
+           Address : C-265 New Loco Colony, Cantt Varanasi, Uttar Pradesh, Pin Code - 221002
+          </p>
+          <p className="text">Phone No. : +91 8884858050</p>
+        </Col>
       </Row>
       <div className="text-center mt-2 text-white p-3">
         © 2024 Copyright: Acadeasy.com
