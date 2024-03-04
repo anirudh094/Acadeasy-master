@@ -37,7 +37,7 @@
   align-items: center;
 }
 .footersocial-media-links span{
-    font-size: 20px;
+    
     margin-left: 10px;
 }
 .footer-content-links:hover {
@@ -46,4 +46,12 @@
 .footer-alignment {
   justify-content: center;
   align-items: center;
+}
+
+.footer-contact-media-links{
+  display: flex;
+  align-items: center;
+}
+.footer-contact-media-links span{
+  margin-left: 10px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/about.css";
-import Testimonials from "./Testimonials";
+// import Testimonials from "./Testimonials";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 const AboutUs = () => {
@@ -211,7 +211,7 @@ At Acadeasy, our mission is to empower college students with the skills and know
           </div>
         </AnimatedOnScroll>
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
 
     </>
   );
