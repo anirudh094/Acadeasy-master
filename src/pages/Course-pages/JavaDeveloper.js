@@ -12,7 +12,7 @@ import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
 const db = StartFirebase();
 
-export class WebDevelopment extends React.Component {
+export class JavaDeveloper extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -24,7 +24,7 @@ export class WebDevelopment extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("ReactJs Developer")
+      equalTo("Java Developer")
     );
 
     onValue(dbref, (snapshot) => {

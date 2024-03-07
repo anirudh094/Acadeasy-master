@@ -12,7 +12,7 @@ import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
 const db = StartFirebase();
 
-export class ArtificialIntelligence extends React.Component {
+export class CyberThreatAnalyst extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -24,7 +24,7 @@ export class ArtificialIntelligence extends React.Component {
     const dbref = query(
       ref(db, "Courses"),
       orderByChild("name"),
-      equalTo("Frontend Developer")
+      equalTo("Cyber Threat Analyst")
     );
 
     onValue(dbref, (snapshot) => {

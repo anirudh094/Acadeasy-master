@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../css/footer.css";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
+import { MdMail } from "react-icons/md";
 
 function FooterBar() {
   return (
@@ -24,7 +29,7 @@ function FooterBar() {
           </p>
         </Col>
         <Col md={6} lg={3}>
-          <h5 className="mb-3 footer-links">Useful-Links</h5>
+          <h5 className="mb-3 footer-links">Links</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white links">
               <a href="/" className="footer-content-links">
@@ -33,71 +38,118 @@ function FooterBar() {
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/products" className="footer-content-links">
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/products"}
+              >
                 Training
-              </a>
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/aboutus" className="footer-content-links">
-                {" "}
-                About Us{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/aboutus"}
+              >
+                About Us
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="/contactus" className="footer-content-links">
-                {" "}
-                Contact Us{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links"
+                to={"/contactus"}
+              >
+                Contact Us
+              </Link>
             </ListGroup.Item>
           </ListGroup>
         </Col>
 
         <Col md={6} lg={3}>
-          <h5 className="mb-3  footer-links">Links</h5>
+          <h5 className="mb-3  footer-links">Contact Info</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                {" "}
-                Frequently Asked Questions{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links footer-contact-media-links"
+                to={"/contactus"}
+              >
+                <FaHome size={50} color="white"/>
+                <span>
+                  C-265 New Loco Colony, Cantt Varanasi, Uttar Pradesh, 221002
+                </span>
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                Courses Available{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links footer-contact-media-links"
+                to={"/contactus"}
+              >
+                <IoCall size={25} color="white"/>
+                <span> +91 7888328865</span>
+              </Link>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                {" "}
-                Contact{" "}
-              </a>
+              <Link
+                reloadDocument
+                className="footer-content-links footer-contact-media-links"
+                to={"/contactus"}
+              >
+                <MdMail size={25} color="white"/>
+                <span> acadeasyofficial@gmail.com</span>
+              </Link>
             </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={6} lg={3}>
-          <h5 className="mb-3 footer-links">Contact Us</h5>
+          <h5 className="mb-3 footer-links">Social Media</h5>
           <ListGroup variant="flush" className="list-items">
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                <FaInstagram size={30} />{" "}
+              <a
+                href="https://www.instagram.com/acadeasy_official/"
+                className="footer-content-links footersocial-media-links"
+              >
+                <FaInstagram size={20} />
+                <span>Instagram</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
-                <FaLinkedin size={30} />
+              <a
+                href="https://www.linkedin.com/company/acadeasy"
+                className="footer-content-links footersocial-media-links"
+              >
+                <FaLinkedin size={20} />
+                <span>LinkedIn</span>
               </a>
             </ListGroup.Item>
             <ListGroup.Item className="bg-none px-0 text-white">
-              <a href="#contactus" className="footer-content-links">
+              <a
+                href="https://wa.me/message/RYPR7FF4OFLDO1"
+                className="footer-content-links footersocial-media-links"
+              >
                 {" "}
-                <FaFacebook size={30} />{" "}
+                <FaWhatsapp size={20} />
+                <span>WhatsApp</span>
+              </a>
+            </ListGroup.Item>
+            <ListGroup.Item className="bg-none px-0 text-white">
+              <a
+                href="https://www.youtube.com/@acadeasy_official"
+                className="footer-content-links footersocial-media-links"
+              >
+                {" "}
+                <FaYoutube size={20} />
+                <span>Youtube</span>
               </a>
             </ListGroup.Item>
           </ListGroup>
         </Col>
       </Row>
       <div className="text-center mt-2 text-white p-3">
-        © 2023 Copyright: Acadeasy.com
+        © 2024 Copyright: Acadeasy.com
       </div>
     </footer>
   );
