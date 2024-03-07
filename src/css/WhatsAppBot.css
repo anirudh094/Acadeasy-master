@@ -1,0 +1,15 @@
+.whatsAppBot-Body{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 0;
+    width: fit-content;
+    color: #27D469;
+    border-radius: 5px;
+    margin: 10px;
+}
+.whatsAppBot-Body:hover,.whatsAppBot-Body:focus,.whatsAppBot-Body:active{
+    background-color: white;
+    color: #27D469;
+}
