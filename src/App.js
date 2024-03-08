@@ -3,7 +3,7 @@ import "./App.css";
 import NavigationalRoutes from "./pages/NavigationalRoutes";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer"
-// import "../public/css/home.css";
+import WhatsAppBot from "./pages/WhatsAppBot";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Navbar />
       <NavigationalRoutes />
       <Footer/>
+      <WhatsAppBot/>
     </Router>
   );
 }
