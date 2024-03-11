@@ -138,7 +138,7 @@ export class StaffingEngineer extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-1">
                         <h4>SELF PACED</h4>
-                        <h3>₹799</h3>
+                        <h3>₹3500</h3>
                         <ul>
                           <li>
                             <svg
@@ -238,7 +238,7 @@ export class StaffingEngineer extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-2">
                         <h4>MENTOR LED</h4>
-                        <h3>₹1299</h3>
+                        <h3>₹5000</h3>
                         <ul>
                           <li>
                             <svg
@@ -337,7 +337,7 @@ export class StaffingEngineer extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-3">
                         <h4>ADVANCE</h4>
-                        <h3>₹1799</h3>
+                        <h3>₹7000</h3>
                         <ul>
                           <li>
                             <svg
