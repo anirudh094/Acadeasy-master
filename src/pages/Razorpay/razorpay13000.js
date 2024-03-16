@@ -7,7 +7,7 @@ function Razorpay13000() {
       const script = document.createElement("script");
       script.src = "https://checkout.razorpay.com/v1/payment-button.js";
       script.async = true;
-      script.dataset.payment_button_id = "pl_NTNCIYEtpCx3Jw";
+      script.dataset.payment_button_id = "pl_NjtQzOs5cd4DJH";
       rzpPaymentForm.appendChild(script);
     }
   });

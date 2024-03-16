@@ -138,7 +138,7 @@ export class FrontendDeveloper extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-1">
                         <h4>SELF PACED</h4>
-                        <h3>₹5000</h3>
+                        <h3>₹3500</h3>
                         <ul>
                           <li>
                             <svg
@@ -238,7 +238,7 @@ export class FrontendDeveloper extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-2">
                         <h4>MENTOR LED</h4>
-                        <h3>₹9000</h3>
+                        <h3>₹5000</h3>
                         <ul>
                           <li>
                             <svg
@@ -337,7 +337,7 @@ export class FrontendDeveloper extends React.Component {
                     <AnimatedOnScroll animationIn="tada">
                       <div className="price-container-3">
                         <h4>ADVANCE</h4>
-                        <h3>₹13000</h3>
+                        <h3>₹7000</h3>
                         <ul>
                           <li>
                             <svg
@@ -370,7 +370,7 @@ export class FrontendDeveloper extends React.Component {
                             >
                               <path d="m422.304-284.695 290.479-290.479-71.262-71.827-219.217 219.217-107.217-107.217-71.261 71.827 178.478 178.479ZM480-60.782q-87.522 0-163.906-32.96-76.385-32.96-132.888-89.464-56.504-56.503-89.464-132.888Q60.782-392.478 60.782-480t32.96-163.906q32.96-76.385 89.464-132.888 56.503-56.504 132.888-89.464 76.384-32.96 163.906-32.96t163.906 32.96q76.385 32.96 132.888 89.464 56.504 56.503 89.464 132.888 32.96 76.384 32.96 163.906t-32.96 163.906q-32.96 76.385-89.464 132.888-56.503 56.504-132.888 89.464Q567.522-60.782 480-60.782Z" />
                             </svg>
-                            4+ Hrs of Live Sessions
+                            32+ Hrs of Live Sessions
                           </li>
                           <li>
                             <svg
