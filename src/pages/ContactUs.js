@@ -184,7 +184,7 @@ const ContactUs = () => {
                         Mail Us At
                       </h4>
                       <p className="text-body-color text-base">
-                        acadeasyofficial@gmail.com
+                        contact@acadeasy.com
                       </p>
                     </div>
                   </div>

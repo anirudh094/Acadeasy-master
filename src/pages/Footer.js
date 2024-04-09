@@ -99,7 +99,7 @@ function FooterBar() {
                 to={"/contactus"}
               >
                 <MdMail size={25} color="white"/>
-                <span> acadeasyofficial@gmail.com</span>
+                <span> contact@acadeasy.com</span>
               </Link>
             </ListGroup.Item>
           </ListGroup>
