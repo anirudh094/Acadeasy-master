@@ -36,19 +36,7 @@
   text-align: left !important;
   width: 80%;
 }
-/* .rotating-heading::before {
-  content: "Learn. Create. Excel";
-  animation-name: animate;
-  animation: typing 5s steps(20, end), lineBlink 1s infinite step-end;;
-  animation-duration: 4.3s;
-  animation-iteration-count: infinite;
-  text-decoration-color: white !important;
-}
-@keyframes animate {
 
-  50% {content: "Tech Education Redefined:ACADEASY";
-    }
-} */
 .rotating-heading::before {
   content: "Connecting Curious Minds";
   animation-name: animate;

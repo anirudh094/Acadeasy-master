@@ -7,6 +7,8 @@ import Razorpay13000 from "../Razorpay/razorpay13000";
 import Certificate from "../certificate";
 import { Products } from "../Products";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
+import { FaDownload } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
@@ -61,6 +63,14 @@ export class CyberThreatAnalyst extends React.Component {
                         </button>
                       </div>
                     </a>
+                    <Link
+                      className="download-brochure"
+                      to="/files/Brochure.pdf"
+                      target="_blank"
+                      download
+                    >
+                      Brochure <FaDownload size={20} />
+                    </Link>
                     <div className="courses-rating-box">
                       <div className="courses-rating-box-rating">
                         {row.data.rating}
