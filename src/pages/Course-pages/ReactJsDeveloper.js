@@ -7,6 +7,7 @@ import { Products } from "../Products";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ChooseAcadeasy from "../ChooseAcadeasy";
 
 import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
@@ -136,7 +137,7 @@ export class ReactJsDeveloper extends React.Component {
                     </AnimatedOnScroll>
                   </div>
                 </div>
-
+                <ChooseAcadeasy/>
                 <Pricebox/>
                 <Certificate />
                 <Products />
