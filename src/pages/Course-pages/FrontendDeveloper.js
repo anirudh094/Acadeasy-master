@@ -7,6 +7,7 @@ import { Products } from "../Products";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Accordion } from "rsuite";
 
 import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
@@ -137,7 +138,97 @@ export class FrontendDeveloper extends React.Component {
                   </div>
                 </div>
 
-                <Pricebox/>
+                <div className="curriculum-body">
+                  <h4>CURRICULUM</h4>
+
+                  <Accordion>
+                    <Accordion.Panel header="HTML">
+                      <ul className="curriculum-topics">
+                        <li>
+                          <span>•</span>Introduction to HTML
+                        </li>
+                        <li>
+                          <span>•</span>Writing Semantic HTML
+                        </li>
+                        <li>
+                          <span>•</span>HTML Tags
+                        </li>
+                        <li>
+                          <span>•</span>Forms and Validations
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                    <Accordion.Panel header="CSS">
+                      <ul className="curriculum-topics">
+                        <li>
+                          <span>•</span>Learn the Basics
+                        </li>
+                        <li>
+                          <span>•</span>Making Layouts
+                        </li>
+                        <li>
+                          <span>•</span>Flex Box
+                        </li>
+                        <li>
+                          <span>•</span>Grid in CSS
+                        </li>
+                        <li>
+                          <span>•</span>Media Queries
+                        </li>
+                        <li>
+                          <span>•</span>Responsive Web Design
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                    <Accordion.Panel header="BOOTSTARP">
+                      <ul className="curriculum-topics">
+                        <li>
+                          <span>•</span>Using Bootstap
+                        </li>
+                        <li>
+                          <span>•</span>Bootstap templates/designs
+                        </li>
+                        <li>
+                          <span>•</span>Responsive Web Design
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                    <Accordion.Panel header="JAVASCRIPT">
+                      <ul className="curriculum-topics">
+                        <li>
+                          <span>•</span>Introduction to Javascript
+                        </li>
+                        <li>
+                          <span>•</span>Functions and Objects
+                        </li>
+                        <li>
+                          <span>•</span>Selectors
+                        </li>
+                        <li>
+                          <span>•</span>Event Listener in Javascript
+                        </li>
+                        <li>
+                          <span>•</span>DOM Manipulation
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                    <Accordion.Panel header="GIT & GITHUB">
+                      <ul className="curriculum-topics">
+                        <li>
+                          <span>•</span>Starting with Git & Github
+                        </li>
+                        <li>
+                          <span>•</span>Git Push & Pull
+                        </li>
+                        <li>
+                          <span>•</span>Open source contribution
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                  </Accordion>
+                </div>
+
+                <Pricebox />
                 <Certificate />
                 <Products />
               </>
