@@ -9,6 +9,7 @@
   color: white;
   font-weight: 700;
   margin-bottom: 20px;
+  font-size: 32px;
 }
 .courses-banner-details p {
   color: white;
@@ -22,6 +23,15 @@
   .courses-banner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .courses-banner-details p {
+    text-align: justify;
+  }
+  .courses-banner-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .courses-rating-box {

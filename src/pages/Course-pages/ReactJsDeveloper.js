@@ -8,6 +8,7 @@ import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ChooseAcadeasy from "../ChooseAcadeasy";
+import { Accordion } from "rsuite";
 
 import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
@@ -137,8 +138,100 @@ export class ReactJsDeveloper extends React.Component {
                     </AnimatedOnScroll>
                   </div>
                 </div>
-                <ChooseAcadeasy/>
-                <Pricebox/>
+                <ChooseAcadeasy />
+
+                <AnimatedOnScroll animationIn="fadeInDownBig">
+                  <div className="curriculum-body">
+                    <h4>CURRICULUM</h4>
+
+                    <Accordion>
+                      <Accordion.Panel header="Introduction to React">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>create react app
+                          </li>
+                          <li>
+                            <span>•</span>CLI Tools
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="React Components">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Class Components
+                          </li>
+                          <li>
+                            <span>•</span>Functional Components
+                          </li>
+                          <li>
+                            <span>•</span>Props and State
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Hooks">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>useState
+                          </li>
+                          <li>
+                            <span>•</span>useEffect
+                          </li>
+                          <li>
+                            <span>•</span>Custom Hooks
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Routers">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>React Routers
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Styling">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>CSS Module
+                          </li>
+                          <li>
+                            <span>•</span>Bootstarp
+                          </li>
+                          <li>
+                            <span>•</span>Talwind CSS
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="API Calls">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Rest API
+                          </li>
+                          <li>
+                            <span>•</span>Async/await
+                          </li>
+                          <li>
+                            <span>•</span>Promises
+                          </li>
+                          <li>
+                            <span>•</span>Redux
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Deployment">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Git / Github
+                          </li>
+                          <li>
+                            <span>•</span>Netlify , Versel
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                    </Accordion>
+                  </div>
+                </AnimatedOnScroll>
+
+                <Pricebox />
                 <Certificate />
                 <Products />
               </>

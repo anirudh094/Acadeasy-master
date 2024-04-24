@@ -232,6 +232,7 @@ export class FrontendDeveloper extends React.Component {
                     </Accordion>
                   </div>
                 </AnimatedOnScroll>
+                
                 <Pricebox />
                 <Certificate />
                 <Products />

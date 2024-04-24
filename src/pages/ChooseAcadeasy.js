@@ -4,7 +4,7 @@ import "../css/ChooseAcadeasy.css";
 function ChooseAcadeasy() {
   return (
     <div className="working-cy">
-      <h3>Why Choose Acadeasy ?</h3>
+      <h3>Why Choose <span>ACADEASY</span> ?</h3>
       <div className="working-cy-components">
           <div className="working-cy-components-div">
             <img

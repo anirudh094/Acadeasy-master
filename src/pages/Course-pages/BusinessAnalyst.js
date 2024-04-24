@@ -8,6 +8,7 @@ import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ChooseAcadeasy from "../ChooseAcadeasy";
+import { Accordion } from "rsuite";
 
 import StartFirebase from "../firebaseconfig_products";
 import { ref, onValue, query, orderByChild, equalTo } from "firebase/database";
@@ -68,7 +69,7 @@ export class BusinessAnalyst extends React.Component {
                       target="_blank"
                       download
                     >
-                      Brochure <FaDownload size={20}/>
+                      Brochure <FaDownload size={20} />
                     </Link>
                     <div className="courses-rating-box">
                       <div className="courses-rating-box-rating">
@@ -137,8 +138,96 @@ export class BusinessAnalyst extends React.Component {
                     </AnimatedOnScroll>
                   </div>
                 </div>
-                <ChooseAcadeasy/>
-                <Pricebox/>
+                <ChooseAcadeasy />
+
+                <AnimatedOnScroll animationIn="fadeInDownBig">
+                  <div className="curriculum-body">
+                    <h4>CURRICULUM</h4>
+
+                    <Accordion>
+                      <Accordion.Panel header="Business Analysis Basics">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Introduction to Business Analysis
+                          </li>
+                          <li>
+                            <span>•</span>What Business Analysts do
+                          </li>
+                          <li>
+                            <span>•</span>Business Analysis Techniques
+                          </li>
+                          <li>
+                            <span>•</span>SDLC & Testing
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Using UML in Business Process">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>What is UML
+                          </li>
+                          <li>
+                            <span>•</span>Understanding UML diagrams
+                          </li>
+                          <li>
+                            <span>•</span>UML Tools/software
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Business Process Model">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>What is BPMN
+                          </li>
+                          <li>
+                            <span>•</span>Using BPNM in Business Process Analysis
+                          </li>
+                          <li>
+                            <span>•</span>BPMN Diagrams
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Requirements Analysis (RA)">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Requirement Analysis Fundamentals
+                          </li>
+                          <li>
+                            <span>•</span>Significance of RA and steps to follow
+                          </li>
+                          <li>
+                            <span>•</span>Requirements Lifecycle
+                          </li>
+                          <li>
+                            <span>•</span>JIRA Software
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Tableau">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Data Visualization with Tableau
+                          </li>
+                          <li>
+                            <span>•</span>Creating dashboards in Tableau
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                      <Accordion.Panel header="Software Testing Life Cycle">
+                        <ul className="curriculum-topics">
+                          <li>
+                            <span>•</span>Role of BA in testing
+                          </li>
+                          <li>
+                            <span>•</span>UAT - User Acceptance Testing
+                          </li>
+                        </ul>
+                      </Accordion.Panel>
+                    </Accordion>
+                  </div>
+                </AnimatedOnScroll>
+
+                <Pricebox />
                 <Certificate />
                 <Products />
               </>

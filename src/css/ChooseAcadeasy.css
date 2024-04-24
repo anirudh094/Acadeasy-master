@@ -1,10 +1,11 @@
 .working-cy h3{
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 700;
     text-align: center;
     margin: 10px;
     color: white;
 }
+
 .working-cy-components{
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +18,10 @@
     align-items: center;
     width: 300px;
     margin-bottom: 60px;
+    transition: transform .5s;
+}
+.working-cy-components-div:hover{
+    transform: scale(1.2);
 }
 .working-cy-components-div p{
     color: #000;
