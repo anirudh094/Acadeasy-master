@@ -48,7 +48,7 @@ function ChooseAcadeasy() {
             src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Choose%20Acadeasy%2FIndustry-Recognized%20Certification.png?alt=media&token=4e0d61e6-824d-47a7-939c-61f8442e4300"
             alt="logo"
           ></img>
-          <p>Industry-Recognized Certification</p>
+          <p>Industry-Recognized ISO Certification</p>
         </div>
       </div>
     </div>
