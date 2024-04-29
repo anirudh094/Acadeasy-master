@@ -12,7 +12,7 @@ const AboutUs = () => {
           <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12 remove-flex-sm">
             <div className="w-full lg:w-6/12">
               <h2 className="orange-text w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 ">
-                Acadezy provides industry ready project based courses
+                Acadeasy provides industry ready project based courses
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6">
                 Acadeasy is an ISO 9001:2015 certified and MSME approved
@@ -51,12 +51,12 @@ const AboutUs = () => {
               <img
                 className="lg:hidden sm:block hidden w-full"
                 src="images/about-us.jpg"
-                alt="grocery"
+                alt="acadeasy"
               />
               <img
                 className="sm:hidden lg:hidden block w-full"
                 src="images/about-us.jpg"
-                alt="grocery"
+                alt="acadeasy"
               />
             </div>
           </div>
