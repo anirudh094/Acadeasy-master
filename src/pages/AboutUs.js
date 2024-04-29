@@ -15,9 +15,13 @@ const AboutUs = () => {
                 Acadezy provides industry ready project based courses
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-                Welcome to Acadeasy, where we pave the path to success for
-                college students seeking to enhance their skill sets and
-                transition seamlessly into the professional world.
+                Acadeasy is an ISO 9001:2015 certified and MSME approved
+                company, which deals in providing top-tier industrial training
+                and live project experiences across diverse domains. Our
+                commitment to excellence is reflected in our rigorous adherence
+                to internationally recognized quality standards, ensuring that
+                every aspect of our training programs meets the highest
+                benchmarks of quality and effectiveness.
                 <br></br> <br></br> At Acadeasy, we specialize in providing
                 online project-based courses meticulously crafted to empower
                 students with practical knowledge and hands-on experience. Our
