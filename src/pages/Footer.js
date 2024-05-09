@@ -149,7 +149,7 @@ function FooterBar() {
         </Col>
       </Row>
       <div className="text-center mt-2 text-white p-3">
-        © 2024 Copyright: Acadeasy.com
+        © 2024 Copyright: acadeasy.com
       </div>
     </footer>
   );
