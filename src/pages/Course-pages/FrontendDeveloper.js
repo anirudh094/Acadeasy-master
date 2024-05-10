@@ -9,6 +9,7 @@ import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Accordion } from "rsuite";
 import ChooseAcadeasy from "../ChooseAcadeasy";
+import Carousel from "react-bootstrap/Carousel";
 
 export class FrontendDeveloper extends React.Component {
   render() {
@@ -104,12 +105,36 @@ export class FrontendDeveloper extends React.Component {
                 </div>
               </div>
               <div className="courses-banner-img">
-                <AnimatedOnScroll animationIn="tada">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/FRONTEND%20DEVELOPER.png?alt=media&token=c289f481-9b1d-43d2-89f1-fac871ec6c87"
-                    alt="Frontend Developer"
-                  ></img>
-                </AnimatedOnScroll>
+                {/* <img
+                  src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/FRONTEND%20DEVELOPER.png?alt=media&token=c289f481-9b1d-43d2-89f1-fac871ec6c87"
+                  alt="Frontend Developer"
+                ></img> */}
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Frontend%20Developer%2Fcarousel%201.png?alt=media&token=82ed4626-0ea9-4d3e-a373-36724523a3ce"
+                      alt="Frontend Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Frontend%20Developer%2Fcarousel%204.png?alt=media&token=90d63ea7-6f3f-4a4e-b5b2-7a5955cefa6a"
+                      alt="Frontend Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Frontend%20Developer%2Fcarousel%205.png?alt=media&token=c830e36b-9dcf-47ce-a3cc-5701d8cf5e70"
+                      alt="Frontend Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Frontend%20Developer%2Fcarousel%203.png?alt=media&token=4c591b21-4b5b-4053-8452-d6d15879d05c"
+                      alt="Frontend Developer"
+                    ></img>
+                  </Carousel.Item>
+                </Carousel>
               </div>
             </div>
 
