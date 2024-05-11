@@ -9,6 +9,7 @@ import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ChooseAcadeasy from "../ChooseAcadeasy";
 import { Accordion } from "rsuite";
+import Carousel from "react-bootstrap/Carousel";
 
 export class ReactJsDeveloper extends React.Component {
   render() {
@@ -105,12 +106,36 @@ export class ReactJsDeveloper extends React.Component {
                 </div>
               </div>
               <div className="courses-banner-img">
-                <AnimatedOnScroll animationIn="tada">
-                  <img
+                {/* <img
                     src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/REACTJS%20DEVELOPER.png?alt=media&token=1f02e5ad-5890-4b35-ac05-fb8389771134"
                     alt="ReactJs Developer"
-                  ></img>
-                </AnimatedOnScroll>
+                  ></img> */}
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/ReactJs%2F1.png?alt=media&token=9595d194-9db7-48e3-ab3b-f45bbd3733b0"
+                      alt="ReactJs Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/ReactJs%2F4.png?alt=media&token=dc225e69-bd76-4701-aa42-1b8e2d8f6e36"
+                      alt="ReactJs Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/ReactJs%2F5.png?alt=media&token=14aab2eb-8d4a-4787-9579-95d9c80e8bfa"
+                      alt="ReactJs Developer"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/ReactJs%2F3.png?alt=media&token=852b08de-15f4-49c4-bf23-f41ed8a238ab"
+                      alt="ReactJs Developer"
+                    ></img>
+                  </Carousel.Item>
+                </Carousel>
               </div>
             </div>
             <ChooseAcadeasy />

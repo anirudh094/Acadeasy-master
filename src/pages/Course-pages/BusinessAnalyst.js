@@ -9,6 +9,7 @@ import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ChooseAcadeasy from "../ChooseAcadeasy";
 import { Accordion } from "rsuite";
+import Carousel from "react-bootstrap/Carousel";
 
 export class BusinessAnalyst extends React.Component {
   render() {
@@ -105,12 +106,36 @@ export class BusinessAnalyst extends React.Component {
                 </div>
               </div>
               <div className="courses-banner-img">
-                <AnimatedOnScroll animationIn="tada">
-                  <img
+                {/* <img
                     src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Business%20Analyst.png?alt=media&token=e83d2661-8372-40ce-ac53-248576195962"
                     alt="Business Analyst"
-                  ></img>
-                </AnimatedOnScroll>
+                  ></img> */}
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Business%20Analyst%2F1.png?alt=media&token=fc471be6-f0d8-4d7a-ad97-c71e7e80e819"
+                      alt="Business Analyst"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Business%20Analyst%2F4.png?alt=media&token=c79bacef-cfc2-4600-a71d-2ed8eeb07089"
+                      alt="Business Analyst"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Business%20Analyst%2F5.png?alt=media&token=965f76d6-273a-43fe-b5f2-0552ccf8c733"
+                      alt="Business Analyst"
+                    ></img>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/acad-easy.appspot.com/o/Business%20Analyst%2F3.png?alt=media&token=2acb174e-a28a-4063-93fd-30e5091545de"
+                      alt="Business Analyst"
+                    ></img>
+                  </Carousel.Item>
+                </Carousel>
               </div>
             </div>
             <ChooseAcadeasy />

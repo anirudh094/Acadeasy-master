@@ -12,17 +12,17 @@ const AboutUs = () => {
           <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12 remove-flex-sm">
             <div className="w-full lg:w-6/12">
               <h2 className="orange-text w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 ">
-                Acadeasy provides industry ready project based courses
+                AcadEasy provides industry ready project based courses
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-                Acadeasy is an ISO 9001:2015 certified and MSME approved
+                AcadEasy is an ISO 9001:2015 certified and MSME approved
                 company, which deals in providing top-tier industrial training
                 and live project experiences across diverse domains. Our
                 commitment to excellence is reflected in our rigorous adherence
                 to internationally recognized quality standards, ensuring that
                 every aspect of our training programs meets the highest
                 benchmarks of quality and effectiveness.
-                <br></br> <br></br> At Acadeasy, we specialize in providing
+                <br></br> <br></br> At AcadEasy, we specialize in providing
                 online project-based courses meticulously crafted to empower
                 students with practical knowledge and hands-on experience. Our
                 mission is to bridge the gap between academia and industry by
@@ -30,12 +30,12 @@ const AboutUs = () => {
                 evolving demands of various sectors.
                 <br></br> Whether you're looking to sharpen your programming
                 prowess, refine your design skills, or delve into the
-                intricacies of data analysis, Acadeasy is your ultimate
+                intricacies of data analysis, AcadEasy is your ultimate
                 destination. Our team of seasoned professionals and educators is
                 dedicated to guiding you through an immersive learning journey,
                 equipping you with the expertise and confidence to thrive in
                 today's competitive landscape.
-                <br></br> Join us at Acadeasy and unlock your full potential as
+                <br></br> Join us at AcadEasy and unlock your full potential as
                 you embark on a transformative educational experience tailored
                 to propel you towards professional excellence.
               </p>
@@ -51,12 +51,12 @@ const AboutUs = () => {
               <img
                 className="lg:hidden sm:block hidden w-full"
                 src="images/about-us.jpg"
-                alt="acadeasy"
+                alt="acadEasy"
               />
               <img
                 className="sm:hidden lg:hidden block w-full"
                 src="images/about-us.jpg"
-                alt="acadeasy"
+                alt="acadEasy"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ const AboutUs = () => {
                 Our Mission
               </h2>
               <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">
-                At Acadeasy, our mission is to empower college students with the
+                At AcadEasy, our mission is to empower college students with the
                 skills and knowledge they need to excel in their careers. We
                 believe that education should be practical, relevant, and
                 accessible, which is why we offer online project-based courses
