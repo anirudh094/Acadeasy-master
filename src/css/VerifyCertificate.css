@@ -1,0 +1,72 @@
+.VerifyCertificate-body {
+  background-color: white;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.certificateId-box {
+  border: 1px solid black;
+  width: 200px;
+  padding: 2px 5px;
+  height: 35px;
+  text-align: center;
+}
+
+#selectBtn {
+  background-color: #008080;
+  color: white;
+  margin-left: 50px;
+  padding: 5px 20px;
+  border-radius: 2px;
+  height: 35px;
+}
+
+.Student-Details-heading {
+  /* display: none; */
+  background-color: #008080;
+  color: white;
+  margin: 30px auto 0px;
+  font-weight: 800;
+  font-size: 200%;
+  width: 90%;
+}
+.Student-Details {
+  /* display: none; */
+  margin: 0px auto 30px;
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem 1rem;
+}
+.Student-Details-row {
+  display: flex;
+}
+
+.Student-Details-row div {
+  padding: 12px;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+.Student-Details input {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .Student-Details-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .Student-Details-row div {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 5px;
+  }
+}

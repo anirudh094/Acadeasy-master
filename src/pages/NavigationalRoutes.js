@@ -12,6 +12,7 @@ import { BusinessAnalyst } from "./Course-pages/BusinessAnalyst";
 import { DataEngineer } from "./Course-pages/DataEngineer";
 import { FinancialAnalyst } from "./Course-pages/FinancialAnalyst";
 import { StaffingEngineer } from "./Course-pages/StaffingEngineer";
+import { VerifyCertificate } from "./VerifyCertificate";
 import Dashboard from "./UserDashboard";
 
 const NavigationalRoutes = () => {
@@ -31,6 +32,7 @@ const NavigationalRoutes = () => {
       <Route path="/financialanalyst" element={<FinancialAnalyst />} />
       <Route path="/staffingengineer" element={<StaffingEngineer />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/VerifyCertificate" element={<VerifyCertificate />} />
     </Routes>
   );
 };
