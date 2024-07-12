@@ -35,7 +35,7 @@ export class VerifyCertificate extends React.Component {
             type="text"
             id="userbox"
             className="certificateId-box"
-            placeholder="Enter Your CertificateId"
+            placeholder="Enter Your Certificate Id"
             value={this.state.CertificateId}
             onChange={(e) => {
               this.setState({ CertificateId: e.target.value });
